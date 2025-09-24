@@ -12,459 +12,468 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("https:\\/\\/www.f-list.net\\/(?!chat3).*") {
-    :root {
-        --dracula-bg: #262a36;
-        --dracula-fg: #f8f8f2;
-        --dracula-selection: #44475a;
-        --dracula-comment: #6272a4;
-        --dracula-red: #ff5555;
-        --dracula-red-half: #ff55557f;
-        --dracula-orange: #ffb86c;
-        --dracula-orange-half: #ffb86c7f;
-        --dracula-yellow: #f1fa8c;
-        --dracula-yellow-half: #f1fa8c7f;
-        --dracula-green: #50fa7b;
-        --dracula-green-half: #50fa7b7f;
-        --dracula-purple: #bd93f9;
-        --dracula-purple-half: #bd93f97f;
-        --dracula-cyan: #8be9fd;
-        --dracula-cyan-half: #8be9fd7f;
-        --dracula-pink: #ff79c6;
-        --dracula-pink-half: #ff79c67f;
-        --dracula-bright-red: #ff6e6e;
-        --dracula-bright-green: #69ff94;
-        --dracula-bright-yellow: #ffffa5;
-        --dracula-bright-blue: #d6acff;
-        --dracula-bright-magenta: #ff92df;
-        --dracula-bright-cyan: #a4ffff;
-        --dracula-bright-white: #ffffff;
-        --dracula-menu: #21222c;
-        --dracula-visual: #3e4452;
-        --dracula-gutter-fg: #4b5263;
-        --dracula-nontext: #3b4048;
-        --dracula-white: #abb2bf;
-        --dracula-white-half: #abb2bf7f;
-        --dracula-black: #191a21;
-    }
+  :root {
+    --dracula-bg: #262a36;
+    --dracula-fg: #f8f8f2;
+    --dracula-selection: #44475a;
+    --dracula-comment: #6272a4;
+    --dracula-red: #ff5555;
+    --dracula-red-half: #ff55557f;
+    --dracula-orange: #ffb86c;
+    --dracula-orange-half: #ffb86c7f;
+    --dracula-yellow: #f1fa8c;
+    --dracula-yellow-half: #f1fa8c7f;
+    --dracula-green: #50fa7b;
+    --dracula-green-half: #50fa7b7f;
+    --dracula-purple: #bd93f9;
+    --dracula-purple-half: #bd93f97f;
+    --dracula-cyan: #8be9fd;
+    --dracula-cyan-half: #8be9fd7f;
+    --dracula-pink: #ff79c6;
+    --dracula-pink-half: #ff79c67f;
+    --dracula-bright-red: #ff6e6e;
+    --dracula-bright-green: #69ff94;
+    --dracula-bright-yellow: #ffffa5;
+    --dracula-bright-blue: #d6acff;
+    --dracula-bright-magenta: #ff92df;
+    --dracula-bright-cyan: #a4ffff;
+    --dracula-bright-white: #ffffff;
+    --dracula-menu: #21222c;
+    --dracula-visual: #3e4452;
+    --dracula-gutter-fg: #4b5263;
+    --dracula-nontext: #3b4048;
+    --dracula-white: #abb2bf;
+    --dracula-white-half: #abb2bf7f;
+    --dracula-black: #191a21;
+  }
 
-    body,
-    html body td {
-        background-color: var(--dracula-menu);
-        font-family: Helvetica, "Inter", Roboto, Arial, sans serif;
-        padding: 0px;
+  body,
+  html body td {
+    background-color: var(--dracula-menu);
+    font-family:
+      Helvetica,
+      "Inter",
+      Roboto,
+      Arial,
+      sans serif;
+    padding: 0px;
+  }
+  #Header,
+  #Footer {
+    background: var(--dracula-visual);
+    border-color: var(--dracula-gutter-fg);
+  }
+  #Container {
+  }
+  #tabs .ui-widget-content {
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px -30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px -18px 36px -18px inset;
+    background-image: none;
+  }
+
+  #Logo {
+    background-image: var(--logoUrl);
+    background-size: 100% 100%;
+    scale: 70%;
+    left: -40px;
+    top: 20px;
+  }
+  #admintable tr,
+  #channeltable tr,
+  #NewspostPage_Content,
+  #Frontpage_OnlineFriends a,
+  .Note_Boxnote,
+  .TrackingThread,
+  .Forum_Thread,
+  .Thread_Post,
+  .TrackingPost,
+  .Messagecenter_Message,
+  ul#twitter_update_list li,
+  .replybox,
+  .content-navigation,
+  .UploadedCharacterImage,
+  .NestedComment,
+  #CategoryLinks div,
+  .CustomKink,
+  .TicketUpdate,
+  .ResultListing,
+  .NoteFolder,
+  #GroupHeader,
+  .GroupForum,
+  .Thread_Navigation,
+  #Thread_Replybox,
+  .EditableGroupForum,
+  #Thread_Controlsbox > div,
+  #Forum_CreateThread,
+  .ListedCharacter,
+  #NewComment,
+  .ChatlogEntry,
+  #NoteViewHeader,
+  .NoteBody,
+  .panel {
+    background: var(--dracula-visual);
+  }
+
+  #Content {
+    background-color: var(--dracula-bg);
+    &.active {
+      background: var(--dracula-visual);
     }
-    #Header,
-    #Footer {
+  }
+
+  #Sidebar,
+  #Sidebar.FrontpageSidebar {
+    &,
+    a,
+    & #fbtab_chat,
+    & #fbtab_bookmarks,
+    & #fbtab_threads,
+    & #fbtab_personals,
+    & #fbtab_subscribestar {
+      background-color: var(--dracula-bg);
+      &.active {
         background: var(--dracula-visual);
-        border-color: var(--dracula-gutter-fg);
+      }
     }
-    #Container {}
-    #tabs .ui-widget-content {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px -30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px -18px 36px -18px inset;
-        background-image: none;
-    }
+  }
+  #tabs .ui-widget-content {
+    border-color: var(--dracula-menu);
+    background-color: var(--dracula-bg);
+  }
+  body,
+  #Character_InfoBox,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--dracula-fg);
+  }
+  .LightPanel {
+    color: var(--dracula-comment);
+  }
+  .info,
+  .help,
+  #tabs .ui-widget-content {
+    color: var(--dracula-fg);
+  }
 
-    #Logo {
-        background-image: var(--logoUrl);
-        background-size: 100% 100%;
-        scale: 70%;
-        left: -40px;
-        top: 20px;
+  a {
+    color: var(--dracula-cyan);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--dracula-bright-white);
+  }
+  .ui-widget-overlay {
+    background: var(--dracula-black);
+    opacity: 50%;
+  }
+  .ui-widget-header {
+    background: var(--dracula-black);
+    border: 0px;
+    color: var(--dracula-comment);
+  }
+  .ui-widget,
+  .ui-widget-content {
+    background: var(--dracula-menu);
+    color: var(--dracula-fg);
+  }
+  .ui-flex-item.ui-state-default {
+    color: var(--dracula-fg);
+  }
+  .ui-state-default,
+  .ui-widget-header .ui-state-default,
+  .list-highlight {
+    background: var(--dracula-visual);
+    border: 0px;
+  }
+  .ui-state-default a,
+  .ui-state-default a:link,
+  .ui-state-default a:visited {
+    color: var(--dracula-white);
+  }
+  .ui-widget-header .ui-tabs-selected {
+    font-weight: bold;
+    background: var(--dracula-selection);
+  }
+  .list-highlight.list-active {
+    background: var(--dracula-green-half);
+  }
+  .list-highlight.list-active:hover {
+    background: var(--dracula-green);
+    &,
+    &.NoteFolder .unread,
+    &.NoteFolder .count,
+    & .name {
+      color: var(--dracula-black);
     }
-    #admintable tr,
-    #channeltable tr,
-    #NewspostPage_Content,
-    #Frontpage_OnlineFriends a,
-    .Note_Boxnote,
-    .TrackingThread,
-    .Forum_Thread,
-    .Thread_Post,
-    .TrackingPost,
-    .Messagecenter_Message,
-    ul#twitter_update_list li,
-    .replybox,
-    .content-navigation,
-    .UploadedCharacterImage,
-    .NestedComment,
-    #CategoryLinks div,
-    .CustomKink,
-    .TicketUpdate,
-    .ResultListing,
-    .NoteFolder,
-    #GroupHeader,
-    .GroupForum,
-    .Thread_Navigation,
-    #Thread_Replybox,
-    .EditableGroupForum,
-    #Thread_Controlsbox > div,
-    #Forum_CreateThread,
-    .ListedCharacter,
-    #NewComment,
-    .ChatlogEntry,
-    #NoteViewHeader,
-    .NoteBody,
-    .panel {
-        background: var(--dracula-visual);
-    }
-    
-    #Content {
-        background-color: var(--dracula-bg);
-            &.active {
-                background: var(--dracula-visual);
-            }
-    }
-    
-    #Sidebar,
-    #Sidebar.FrontpageSidebar {
-        &,
-        a,
-        & #fbtab_chat,
-        & #fbtab_bookmarks,
-        & #fbtab_threads,
-        & #fbtab_personals,
-        & #fbtab_subscribestar {
-            background-color: var(--dracula-bg);
-            &.active {
-                background: var(--dracula-visual);
-            }
-        }
-        
-    }
-    #tabs .ui-widget-content {
-        border-color: var(--dracula-menu);
-        background-color: var(--dracula-bg)
-    }
-    body,
-    #Character_InfoBox,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        color: var(--dracula-fg)
-    }
-    .LightPanel {
-        color: var(--dracula-comment);
-    }
-    .info,
-    .help,
-    #tabs .ui-widget-content {
-        color: var(--dracula-fg)
-    }
+  }
+  .ui-tabs-selected a,
+  .ui-tabs-selected a:link,
+  .ui-tabs-selected a:visited {
+    color: var(--dracula-bright-white);
+  }
+  #tabs #tabs-5 {
+    background-color: var(--dracula-menu);
+  }
+  .ui-state-hover,
+  .ui-state-hover:hover,
+  .list-highlight:hover {
+    background: var(--dracula-gutter-fg);
+    color: var(--dracula-fg);
+  }
+  .panel {
+    background: var(--dracula-bg);
+    border-top: 1px var(--dracula-black) solid;
+    color: var(--dracula-white);
+  }
+  textarea,
+  .Textbox {
+    background-color: var(--dracula-bg);
+    border-color: var(--dracula-visual);
+    border-width: 2px;
+    color: var(--dracula-fg);
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  textarea:active,
+  textarea:focus,
+  .Textbox:active,
+  .Textbox:focus {
+    border-color: var(--dracula-visual);
+  }
+  textarea {
+    border-radius: 15px;
+    font-family: verdana, helvetica;
+  }
+  #CharacterEditDescription {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .Textbox {
+    border-radius: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .Note_Boxnote {
+    font-weight: normal;
+    color: var(--dracula-fg);
+  }
+  .Note_Unread {
+    font-weight: bold;
+  }
+  .list-active,
+  .list-active .name {
+    color: var(--dracula-fg);
+  }
+  .NoteFolder,
+  .Notefolder a {
+    color: var(--dracula-white);
+  }
+  .TextareaToolbar,
+  div.TextareaToolbar {
+    background-color: var(--dracula-menu);
+  }
+  #Character_FetishlistFave {
+    border-color: var(--dracula-cyan);
+  }
+  #Character_FetishlistYes {
+    border-color: var(--dracula-green);
+  }
+  #Character_FetishlistMaybe {
+    border-color: var(--dracula-orange);
+  }
+  #Character_FetishlistNo {
+    border-color: var(--dracula-red);
+  }
+  #Character_FetishlistFave,
+  #Character_FetishlistYes,
+  #Character_FetishlistNo,
+  #Character_FetishlistMaybe,
+  .Character_Fetishlist {
+    background-color: var(--dracula-visual);
+  }
+  .Character_SubfetishList,
+  .DarkPanel {
+    background-color: var(--dracula-menu);
+    color: var(--dracula-comment);
+  }
+  div.CollapseHeader {
+    background-color: var(--dracula-visual);
+  }
 
-    a {
-        color: var(--dracula-cyan);
-        font-weight: bold;
-        text-decoration: none;
-    }
-    a:hover {
-        color: var(--dracula-bright-white)
-    }
-    .ui-widget-overlay {
-        background: var(--dracula-black);
-        opacity: 50%;
-    }
-    .ui-widget-header {
-        background: var(--dracula-black);
-        border: 0px;
-        color: var(--dracula-comment)
-    }
-    .ui-widget,
-    .ui-widget-content {
-        background: var(--dracula-menu);
-        color: var(--dracula-fg);
-    }
-    .ui-flex-item.ui-state-default {
-        color: var(--dracula-fg);
-    }
-    .ui-state-default,
-    .ui-widget-header .ui-state-default,
-    .list-highlight {
-        background: var(--dracula-visual);
-        border: 0px;
-    }
-    .ui-state-default a,
-    .ui-state-default a:link,
-    .ui-state-default a:visited {
-        color: var(--dracula-white);
-    }
-    .ui-widget-header .ui-tabs-selected {
-        font-weight: bold;
-        background: var(--dracula-selection);
-    }
-    .list-highlight.list-active {
-        background: var(--dracula-green-half);
-    }
-    .list-highlight.list-active:hover {
-        background: var(--dracula-green);
-        &,
-        &.NoteFolder .unread,
-        &.NoteFolder .count,
-        & .name {
-            color: var(--dracula-black);
-        }
-    }
-    .ui-tabs-selected a,
-    .ui-tabs-selected a:link,
-    .ui-tabs-selected a:visited {
-        color: var(--dracula-bright-white);
-    }
-    #tabs #tabs-5 {
-        background-color: var(--dracula-menu);
-    }
-    .ui-state-hover,
-    .ui-state-hover:hover,
-    .list-highlight:hover {
-        background: var(--dracula-gutter-fg);
-        color: var(--dracula-fg);
-    }
-    .panel {
-        background: var(--dracula-bg);
-        border-top: 1px var(--dracula-black) solid;
-        color: var(--dracula-white);
-    }
-    textarea,
-    .Textbox {
-        background-color: var(--dracula-bg);
-        border-color: var(--dracula-visual);
-        border-width: 2px;
-        color: var(--dracula-fg);
-        box-shadow: none;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-    }
-    textarea:active,
-    textarea:focus,
-    .Textbox:active,
-    .Textbox:focus {
-        border-color: var(--dracula-visual);
-    }
-    textarea {
-        border-radius: 15px;
-        font-family: verdana, helvetica;
-    }
-    #CharacterEditDescription {
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-    }
-    .Textbox {
-        border-radius: 3px;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-    .Note_Boxnote {
-        font-weight: normal;
-        color: var(--dracula-fg)
-    }
-    .Note_Unread {
-        font-weight: bold
-    }
-    .list-active,
-    .list-active .name {
-        color: var(--dracula-fg);
-    }
-    .NoteFolder,
-    .Notefolder a {
-        color: var(--dracula-white)
-    }
-    .TextareaToolbar,
-    div.TextareaToolbar {
-        background-color: var(--dracula-menu)
-    }
-    #Character_FetishlistFave {
-        border-color: var(--dracula-cyan);
-    }
-    #Character_FetishlistYes {
-        border-color: var(--dracula-green);
-    }
-    #Character_FetishlistMaybe {
-        border-color: var(--dracula-orange);
-    }
-    #Character_FetishlistNo {
-        border-color: var(--dracula-red);
-    }
-    #Character_FetishlistFave,
-    #Character_FetishlistYes,
-    #Character_FetishlistNo,
-    #Character_FetishlistMaybe,
-    .Character_Fetishlist {
-        background-color: var(--dracula-visual)
-    }
-    .Character_SubfetishList,
-    .DarkPanel {
-        background-color: var(--dracula-menu);
-        color: var(--dracula-comment);
-    }
-    div.CollapseHeader {
-        background-color: var(--dracula-visual);
-    }
+  blockquote {
+    background-color: var(--dracula-menu);
+    border-color: var(--dracula-visual);
+  }
+  .Character_GuestbookPost {
+    background-color: var(--dracula-visual);
+  }
+  .Character_GuestbookPost div.CollapseHeader {
+    background-color: var(--dracula-gutter-fg);
+  }
+  .thumbnail {
+    border-color: var(--dracula-white);
+  }
+  .avatarthumbnail {
+    -webkit-filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 1.3));
+    box-shadow: none;
+  }
+  .parsed .ui-widget-content a,
+  .ui-widget-content a:hover {
+    color: var(--dracula-white);
+  }
+  a.Character_CustomFetish {
+    color: var(--dracula-fg);
+  }
+  .character_image_actions a:first-of-type,
+  #CharacterImageList .character_image_actions a:first-of-type {
+    color: var(--dracula-red);
+  }
+  #CharacterImageList .character_image_actions a {
+    color: var(--dracula-green);
+  }
+  #existingInlines .character_image_actions a:nth-of-type(2),
+  #existingIcons .character_image_actions a:nth-of-type(2) {
+    color: var(--dracula-green);
+  }
 
-    blockquote {
-        background-color: var(--dracula-menu);
-        border-color: var(--dracula-visual);
-    }
-    .Character_GuestbookPost {
-        background-color: var(--dracula-visual);
-    }
-    .Character_GuestbookPost div.CollapseHeader {
-        background-color: var(--dracula-gutter-fg);
-    }
-    .thumbnail {
-        border-color: var(--dracula-white)
-    }
-    .avatarthumbnail {
-        -webkit-filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.3));
-        filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 1.3));
-        box-shadow: none;
-    }
-    .parsed .ui-widget-content a,
-    .ui-widget-content a:hover {
-        color: var(--dracula-white)
-    }
-    a.Character_CustomFetish {
-        color: var(--dracula-fg)
-    }
-    .character_image_actions a:first-of-type,
-    #CharacterImageList .character_image_actions a:first-of-type {
-        color: var(--dracula-red);
-    }
-    #CharacterImageList .character_image_actions a {
-        color: var(--dracula-green);
-    }
-    #existingInlines .character_image_actions a:nth-of-type(2),
-    #existingIcons .character_image_actions a:nth-of-type(2) {
-        color: var(--dracula-green);
-    }
-
-    button,
-    input[type=button],
-    input[type=submit],
-    .charactionmenu a,
-    select,
-    .ui-dialog-buttonset .ui-button {
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-        background: none;
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        color: var(--dracula-white);
-        font-weight: bold;
-        border: 2px var(--dracula-white) solid;
-        padding-left: 8px;
-        padding-right: 8px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        text-shadow: none;
-        border-width: 2px;
-    }
-    button:hover,
-    input[type=button]:hover,
-    input[type=submit]:hover,
-    .charactionmenu a:hover,
-    .ui-dialog-buttonset button.uibutton:hover,
-    button.ui-state-default:hover,
-    button.ui-widget-content:hover,
-    button.ui-state-default:hover,
-    button.ui-state-hover {
-        background-color: var(--dracula-white-half);
-        font-weight: bold;
-        border-width: 2px;
-        border-top-width: 2px;
-        color: var(--dracula-white);
-        border-color: var(--dracula-white);
-    }
-    select {
-        background-color: var(--dracula-menu);
-        border-left: 0px;
-        border-top: 0px;
-        border-right: 0px
-    }
-    option {
-        border: 0;
-        margin: none;
-    }
-    select option {
-        background-color: var(--dracula-menu);
-        border-color: var(--dracula-menu);
-    }
-    #Character_QuickCompareSelect {
-        width: 170px!important;
-    }
-    #Character_QuickCompareButton,
-    #fptabcontent_chat > div:nth-child(6) > button:nth-child(1) {
-        border-color: var(--dracula-purple);
-        color: var(--dracula-purple);
-    }
-    #Character_QuickCompareButton:hover,
-    #Character_QuickCompareButton:active,
-    #fptabcontent_chat > div:nth-child(6) > button:nth-child(1):hover,
-    #fptabcontent_chat > div:nth-child(6) > button:nth-child(1):active {
-        background-color: var(--dracula-purple-half);
-    }
-    .charactionmenu a {
-        background-image: none!important;
-        border-color: var(--dracula-white);
-        color: var(--dracula-white);
-        margin-right: 3px;
-        margin-top: 3px;
-        margin-left: 3px;
-    }
-    .charactionmenu a:hover,
-    .charactionmenu a:active {
-        background-color: var(--dracula-white-half);
-    }
-    .charactionmenu a.edit {
-        border-color: var(--dracula-cyan);
-        color: var(--dracula-cyan);
-    }
-    .charactionmenu a.edit:hover,
-    .charactionmenu a.edit:active {
-        background-color: var(--dracula-blue-half);
-    }
-    .charactionmenu a.report,
-    .charactionmenu a.delete {
-        border-color: var(--dracula-red);
-        color: var(--dracula-red);
-    }
-    .charactionmenu a.report:hover,
-    .charactionmenu a.report:active,
-    .charactionmenu a.delete:hover,
-    .charactionmenu a.delete:active {
-        background-color: var(--dracula-red-half);
-    }
-    .friendbutton {
-        background: none;
-    }
-    .friendbutton,
-    .friendbutton:hover,
-    .friendbutton:active,
-    .bookmarkdel {
-        border-color: var(--dracula-green)!important;
-        color: var(--dracula-green)!important;
-    }
-    .friendbutton:hover,
-    .friendbutton:active,
-    .bookmarkdel:hover,
-    .bookmarkdel:active {
-        background: var(--dracula-green-half)!important;
-    }
-    .Frontpage_Newspost {
-        background: var(--dracula-bg);
-    }
-    h3,
-    .Frontpage_NewspostTitle {
-        color: var(--dracula-purple);
-    }
-    .Messagecenter_Message .option.accept {
-        color: var(--dracula-green);
-    }
-    .Messagecenter_Message .option.ignore {
-        color: var(--dracula-white)
-    }
-    .characterListCurrent {
-        border-color: var(--dracula-green);
-    }
-    #BBCodeInstantPreview {
-        border: 2px solid var(--dracula-gutter-fg)!important;
-        background-color: var(--dracula-bg)
-    }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  .charactionmenu a,
+  select,
+  .ui-dialog-buttonset .ui-button {
+    box-shadow:
+      rgba(0, 0, 0, 0.12) 0px 1px 3px,
+      rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: var(--dracula-white);
+    font-weight: bold;
+    border: 2px var(--dracula-white) solid;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-shadow: none;
+    border-width: 2px;
+  }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover,
+  .charactionmenu a:hover,
+  .ui-dialog-buttonset button.uibutton:hover,
+  button.ui-state-default:hover,
+  button.ui-widget-content:hover,
+  button.ui-state-default:hover,
+  button.ui-state-hover {
+    background-color: var(--dracula-white-half);
+    font-weight: bold;
+    border-width: 2px;
+    border-top-width: 2px;
+    color: var(--dracula-white);
+    border-color: var(--dracula-white);
+  }
+  select {
+    background-color: var(--dracula-menu);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+  }
+  option {
+    border: 0;
+    margin: none;
+  }
+  select option {
+    background-color: var(--dracula-menu);
+    border-color: var(--dracula-menu);
+  }
+  #Character_QuickCompareSelect {
+    width: 170px !important;
+  }
+  #Character_QuickCompareButton,
+  #fptabcontent_chat > div:nth-child(6) > button:nth-child(1) {
+    border-color: var(--dracula-purple);
+    color: var(--dracula-purple);
+  }
+  #Character_QuickCompareButton:hover,
+  #Character_QuickCompareButton:active,
+  #fptabcontent_chat > div:nth-child(6) > button:nth-child(1):hover,
+  #fptabcontent_chat > div:nth-child(6) > button:nth-child(1):active {
+    background-color: var(--dracula-purple-half);
+  }
+  .charactionmenu a {
+    background-image: none !important;
+    border-color: var(--dracula-white);
+    color: var(--dracula-white);
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+  .charactionmenu a:hover,
+  .charactionmenu a:active {
+    background-color: var(--dracula-white-half);
+  }
+  .charactionmenu a.edit {
+    border-color: var(--dracula-cyan);
+    color: var(--dracula-cyan);
+  }
+  .charactionmenu a.edit:hover,
+  .charactionmenu a.edit:active {
+    background-color: var(--dracula-blue-half);
+  }
+  .charactionmenu a.report,
+  .charactionmenu a.delete {
+    border-color: var(--dracula-red);
+    color: var(--dracula-red);
+  }
+  .charactionmenu a.report:hover,
+  .charactionmenu a.report:active,
+  .charactionmenu a.delete:hover,
+  .charactionmenu a.delete:active {
+    background-color: var(--dracula-red-half);
+  }
+  .friendbutton {
+    background: none;
+  }
+  .friendbutton,
+  .friendbutton:hover,
+  .friendbutton:active,
+  .bookmarkdel {
+    border-color: var(--dracula-green) !important;
+    color: var(--dracula-green) !important;
+  }
+  .friendbutton:hover,
+  .friendbutton:active,
+  .bookmarkdel:hover,
+  .bookmarkdel:active {
+    background: var(--dracula-green-half) !important;
+  }
+  .Frontpage_Newspost {
+    background: var(--dracula-bg);
+  }
+  h3,
+  .Frontpage_NewspostTitle {
+    color: var(--dracula-purple);
+  }
+  .Messagecenter_Message .option.accept {
+    color: var(--dracula-green);
+  }
+  .Messagecenter_Message .option.ignore {
+    color: var(--dracula-white);
+  }
+  .characterListCurrent {
+    border-color: var(--dracula-green);
+  }
+  #BBCodeInstantPreview {
+    border: 2px solid var(--dracula-gutter-fg) !important;
+    background-color: var(--dracula-bg);
+  }
 }
