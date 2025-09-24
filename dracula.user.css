@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           F-List Dracula
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.0.2
 @description    A dark theme for F-List.net
 @author         FatCat
 @updateUrl      https://raw.githubusercontent.com/FatCatClient/F-List-themes/refs/heads/main/dracula.user.css
@@ -48,9 +48,9 @@
     }
 
     body,
-    html {
+    html body td {
         background-color: var(--dracula-menu);
-        font-family: Helvetica, Roboto, Arial, sans serif;
+        font-family: Helvetica, "Inter", Roboto, Arial, sans serif;
         padding: 0px;
     }
     #Header,
@@ -67,6 +67,9 @@
     #Logo {
         background-image: var(--logoUrl);
         background-size: 100% 100%;
+        scale: 70%;
+        left: -40px;
+        top: 20px;
     }
     #admintable tr,
     #channeltable tr,
@@ -103,10 +106,29 @@
     .panel {
         background: var(--dracula-visual);
     }
-    #Sidebar,
-    #Sidebar.FrontpageSidebar,
+    
     #Content {
         background-color: var(--dracula-bg);
+            &.active {
+                background: var(--dracula-visual);
+            }
+    }
+    
+    #Sidebar,
+    #Sidebar.FrontpageSidebar {
+        &,
+        a,
+        & #fbtab_chat,
+        & #fbtab_bookmarks,
+        & #fbtab_threads,
+        & #fbtab_personals,
+        & #fbtab_subscribestar {
+            background-color: var(--dracula-bg);
+            &.active {
+                background: var(--dracula-visual);
+            }
+        }
+        
     }
     #tabs .ui-widget-content {
         border-color: var(--dracula-menu);
@@ -156,7 +178,8 @@
         color: var(--dracula-fg);
     }
     .ui-state-default,
-    .ui-widget-header .ui-state-default {
+    .ui-widget-header .ui-state-default,
+    .list-highlight {
         background: var(--dracula-visual);
         border: 0px;
     }
@@ -169,6 +192,18 @@
         font-weight: bold;
         background: var(--dracula-selection);
     }
+    .list-highlight.list-active {
+        background: var(--dracula-green-half);
+    }
+    .list-highlight.list-active:hover {
+        background: var(--dracula-green);
+        &,
+        &.NoteFolder .unread,
+        &.NoteFolder .count,
+        & .name {
+            color: var(--dracula-black);
+        }
+    }
     .ui-tabs-selected a,
     .ui-tabs-selected a:link,
     .ui-tabs-selected a:visited {
@@ -178,7 +213,8 @@
         background-color: var(--dracula-menu);
     }
     .ui-state-hover,
-    .ui-state-hover:hover {
+    .ui-state-hover:hover,
+    .list-highlight:hover {
         background: var(--dracula-gutter-fg);
         color: var(--dracula-fg);
     }
